@@ -6,11 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <% if (!customer) { %>
+        <p>Customer not found.</p>
+    <% } else { %>
     <H1>Customer Details</H1>
-    <p>Customer Number: <%= customer.customerNumber %></p>
-    <p>Customer Name: <%= customer.customerName %></p>
-    <p>Contact First Name: <%= customer.contactFirstName %></p>
-    <p>Contact Last Name: <%= customer.contactLastName %></p>
-    <p>Phone: <%= customer.phone %></p>
+    <p>Customer Number: <%= customer?.customerNumber %></p>
+    <p>Customer Name: <%= customer?.customerName %></p>
+    <p>Contact First Name: <%= customer?.contactFirstName %></p>
+    <p>Contact Last Name: <%= customer?.contactLastName %></p>
+    <p>Phone: <%= customer?.phone %></p>
+    <% } %>
 </body>
 </html>
